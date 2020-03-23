@@ -58,7 +58,7 @@ section {
     position: relative;
 }
 
-section:after, .subtitle:after, .content:after, .float:after, .menu_clear:after{
+section:after, .subtitle:after, .content:after, .float:after, .menu_clear:after {
     content: "";
     display: block;
     clear: both;
@@ -157,11 +157,15 @@ section:after, .subtitle:after, .content:after, .float:after, .menu_clear:after{
     margin-right: 25px;
 }
 
-.subtitle button {
+.selects{
     float: right;
-    line-height: 42px;
+}
+select {
+    background: #a1a1a1  url('../icons/Arrow.png') no-repeat top 50% right 16px;
+
     min-width: 170px;
-    background-color: #a1a1a1;
+    line-height: 42px;
+    padding-left: 16px;
     border-radius: 3px;
     text-transform: uppercase;
     border: none;
@@ -173,28 +177,24 @@ section:after, .subtitle:after, .content:after, .float:after, .menu_clear:after{
     font-weight: 500;
     margin-right: 18px;
     margin-top: 10px;
-
     transition: background .2s linear;
+
+    /*Убирает стандартную стрелочку*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.subtitle button:hover {
+select option{
+    background-color: #a1a1a1;
+}
+
+select:hover {
     background-color: #ff0000;
 }
 
-.subtitle button:nth-of-type(1) {
+select:nth-of-type(3) {
     margin-right: 0;
-}
-
-.subtitle button span {
-    float: left;
-    margin-left: 18px;
-}
-
-.subtitle button i {
-    float: right;
-    line-height: inherit;
-    margin-right: 18px;
-    color: #ffffff;
 }
 
 .subtitle:after {
@@ -231,7 +231,8 @@ section:after, .subtitle:after, .content:after, .float:after, .menu_clear:after{
     max-width: 430px;
     margin-top: 34px;
 }
-.menu:after{
+
+.menu:after {
     content: "";
     display: block;
     padding-bottom: 58px;
@@ -259,10 +260,11 @@ section:after, .subtitle:after, .content:after, .float:after, .menu_clear:after{
 }
 
 
-.float{
+.float {
     float: right;
     padding-top: 16px;
 }
+
 .menu p {
     float: left;
     padding: 20px 0;
@@ -326,7 +328,7 @@ input:checked + label:after {
 
 }
 
-.menu_right{
+.menu_right {
     float: right;
 }
 
@@ -334,18 +336,21 @@ input:checked + label:after {
 /*List_pager------------------------------------*/
 
 
-.list_pager{
+.list_pager {
     padding: 40px 0;
     text-align: center;
 }
-.list_pager ul{
+
+.list_pager ul {
     list-style: none;
 }
-.list_pager ul li{
+
+.list_pager ul li {
     display: inline-block;
     padding: 0 4px;
 }
-.list_pager ul li a{
+
+.list_pager ul li a {
     font-family: 'Bebas Neue', cursive;
     font-weight: bold;
     font-size: 10px;
@@ -355,13 +360,14 @@ input:checked + label:after {
     border-radius: 50px;
     transition: background .2s linear;
 }
-.list_pager ul li a:hover{
+
+.list_pager ul li a:hover {
     background-color: #fa090a;
     color: #ffffff;
 }
 
 
-footer{
+footer {
     height: 135px;
     background-color: #ffffff;
     position: relative;
